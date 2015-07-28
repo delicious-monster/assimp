@@ -1970,7 +1970,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -rp \"${SRCROOT}/include/assimp/Compiler\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"";
+			shellScript = "cp -rp \"${SRCROOT}/include/assimp/Compiler\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\n\ncp \"${SRCROOT}/include/assimp/vector2.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\ncp \"${SRCROOT}/include/assimp/vector3.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\ncp \"${SRCROOT}/include/assimp/color4.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\ncp \"${SRCROOT}/include/assimp/quaternion.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\ncp \"${SRCROOT}/include/assimp/matrix3x3.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"\ncp \"${SRCROOT}/include/assimp/matrix4x4.inl\" \"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
