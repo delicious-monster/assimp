@@ -1,0 +1,29 @@
+
+framework module Assimp {
+    header "anim.h"
+    header "camera.h"
+    header "cimport.h"
+    header "color4.h"
+    header "defs.h"
+    header "importerdesc.h"
+    header "light.h"
+    header "material.h"
+    header "matrix3x3.h"
+    header "matrix4x4.h"
+    header "mesh.h"
+    header "metadata.h"
+    header "postprocess.h"
+    header "quaternion.h"
+    header "scene.h"
+    header "texture.h"
+    header "types.h"
+    header "vector2.h"
+    header "vector3.h"
+
+    header "Compiler/poppack1.h"
+    header "Compiler/pushpack1.h"
+
+    export *
+}
+
+
