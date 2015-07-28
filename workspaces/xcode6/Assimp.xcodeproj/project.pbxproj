@@ -1869,11 +1869,11 @@
 			buildConfigurationList = 7F7A94961B6627570094C4DA /* Build configuration list for PBXNativeTarget "Assimp" */;
 			buildPhases = (
 				7FFF95411B674BDF00966A05 /* Run Script to copy Compiler public headers into Public headers folder path subdirectory */,
-				7F7A948E1B6627570094C4DA /* Headers */,
 				7FFF95401B6748B000966A05 /* Run Script to build "revision.h" */,
+				7F7A948E1B6627570094C4DA /* Headers */,
 				7F7A948C1B6627570094C4DA /* Sources */,
-				7F7A948F1B6627570094C4DA /* Resources */,
 				7F7A948D1B6627570094C4DA /* Frameworks */,
+				7F7A948F1B6627570094C4DA /* Resources */,
 			);
 			buildRules = (
 			);
