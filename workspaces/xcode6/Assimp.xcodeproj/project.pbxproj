@@ -1274,6 +1274,16 @@
 			name = FBX;
 			sourceTree = "<group>";
 		};
+		7F3070AE1B76D57E00D114D7 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				7F7A94931B6627570094C4DA /* Assimp.h */,
+				7F7A94951B6627570094C4DA /* Info.plist */,
+				7FFF952F1B66E5D700966A05 /* assimp.modulemap */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
 		7F392D931AB2C7C200D952EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1525,9 +1535,7 @@
 		BCC52F1D5AF74E54A2D69524 = {
 			isa = PBXGroup;
 			children = (
-				7F7A94931B6627570094C4DA /* Assimp.h */,
-				7F7A94951B6627570094C4DA /* Info.plist */,
-				7FFF952F1B66E5D700966A05 /* assimp.modulemap */,
+				7F3070AE1B76D57E00D114D7 /* Info */,
 				2DC7AE369B84444B9649035D /* assimp */,
 				7F392D931AB2C7C200D952EB /* Frameworks */,
 				AF05BC16567A496BB5DCB2F0 /* Products */,
