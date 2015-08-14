@@ -1943,9 +1943,11 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/revision.h.in",
 			);
 			name = "Run Script to build \"revision.h\"";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/revision.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1958,9 +1960,11 @@
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/revision.h.in",
 			);
 			name = "Run Script to build \"revision.h\"";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/revision.h",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1972,9 +1976,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/include/assimp/Compiler",
+				"${SRCROOT}/include/assimp",
 			);
 			name = "Run Script to copy Compiler public headers into Public headers folder path subdirectory";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/Compiler",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/vector2.inl",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/vector3.inl",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/color4.inl",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/quaternion.inl",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/matrix3x3.inl",
+				"${TARGET_BUILD_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/matrix4x4.inl",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
