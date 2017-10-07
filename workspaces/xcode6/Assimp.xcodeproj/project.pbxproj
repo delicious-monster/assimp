@@ -2025,6 +2025,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "code code/BoostWorkaround contrib/openddlparser/include include/** $(inherited)";
+				WARNING_CFLAGS = (
+					"-Wno-address-of-packed-member",
+					"-Wno-undefined-var-template",
+				);
 			};
 			name = Debug;
 		};
@@ -2087,6 +2091,10 @@
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "code code/BoostWorkaround contrib/openddlparser/include include/** $(inherited)";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wno-address-of-packed-member",
+					"-Wno-undefined-var-template",
+				);
 			};
 			name = Release;
 		};
@@ -2149,6 +2157,10 @@
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "code code/BoostWorkaround contrib/openddlparser/include include/** $(inherited)";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wno-address-of-packed-member",
+					"-Wno-undefined-var-template",
+				);
 			};
 			name = MinSizeRel;
 		};
@@ -2211,6 +2223,10 @@
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "code code/BoostWorkaround contrib/openddlparser/include include/** $(inherited)";
 				VALIDATE_PRODUCT = YES;
+				WARNING_CFLAGS = (
+					"-Wno-address-of-packed-member",
+					"-Wno-undefined-var-template",
+				);
 			};
 			name = RelWithDebInfo;
 		};
