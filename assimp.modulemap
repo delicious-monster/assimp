@@ -1,5 +1,8 @@
 
 framework module Assimp {
+    header "Compiler/pushpack1.h"
+    header "Compiler/poppack1.h"
+
     header "anim.h"
     header "camera.h"
     header "cimport.h"
@@ -26,10 +29,6 @@ framework module Assimp {
     header "matrix3x3.inl"
     header "matrix4x4.h"
     header "matrix4x4.inl"
-
-
-    header "Compiler/poppack1.h"
-    header "Compiler/pushpack1.h"
 
     export *
 }
