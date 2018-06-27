@@ -1708,7 +1708,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1000;
 				TargetAttributes = {
 					7F7A94901B6627570094C4DA = {
 						CreatedOnToolsVersion = 7.0;
@@ -1962,6 +1962,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = RelWithDebInfo;
@@ -2235,6 +2236,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = MinSizeRel;
@@ -2245,6 +2247,7 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ENABLE_TESTABILITY = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				ONLY_ACTIVE_ARCH = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
@@ -2255,6 +2258,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = Release;
