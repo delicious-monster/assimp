@@ -1708,7 +1708,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1020;
+				LastUpgradeCheck = 1100;
 				TargetAttributes = {
 					7F7A94901B6627570094C4DA = {
 						CreatedOnToolsVersion = 7.0;
@@ -1719,10 +1719,11 @@
 			};
 			buildConfigurationList = 0C36C32B633D49CB92166176 /* Build configuration list for PBXProject "Assimp" */;
 			compatibilityVersion = "Xcode 6.3";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BCC52F1D5AF74E54A2D69524;
 			projectDirPath = ../..;
