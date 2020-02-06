@@ -1707,7 +1707,6 @@
 		9DE203BC835F4C81BCDF25CF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1120;
 				TargetAttributes = {
 					7F7A94901B6627570094C4DA = {
@@ -1990,6 +1989,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				SDKROOT = "$(SDKROOT:default=macosx)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = RelWithDebInfo;
@@ -2305,6 +2305,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				SDKROOT = "$(SDKROOT:default=macosx)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = MinSizeRel;
@@ -2342,6 +2343,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = "$(SDKROOT:default=macosx)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = Debug;
@@ -2377,6 +2379,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				SDKROOT = "$(SDKROOT:default=macosx)";
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos macosx";
 			};
 			name = Release;
