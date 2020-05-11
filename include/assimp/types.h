@@ -52,9 +52,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 // Some runtime headers
 #include <sys/types.h>
-#ifndef __APPLE__
-#include <memory.h> // under Xcode 7 including this header makes building a "module" fail
-#endif
+#include <memory.h>
 #include <math.h>
 #include <limits.h>
 #include <stddef.h>
