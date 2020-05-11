@@ -3,7 +3,9 @@
 Open Asset Import Library (assimp)
 ---------------------------------------------------------------------------
 
-Copyright (c) 2006-2015, assimp team
+Copyright (c) 2006-2020, assimp team
+
+
 
 All rights reserved.
 
@@ -51,7 +53,7 @@ const char* AICMD_MSG_CMPDUMP_HELP =
 "\tCompare two short dumps produced with \'assimp dump <..> -s\' for equality.\n"
 ;
 
-#include "../../code/assbin_chunks.h"
+#include "Common/assbin_chunks.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 #include "generic_inserter.hpp"
@@ -60,7 +62,7 @@ const char* AICMD_MSG_CMPDUMP_HELP =
 #include <stack>
 #include <sstream>
 #include <iostream>
-#include "../../include/assimp/ai_assert.h"
+#include <assimp/ai_assert.h>
 
 // get << for aiString
 template <typename char_t, typename traits_t>
@@ -245,7 +247,7 @@ private:
     /** print our 'stack' */
     std::string print_hierarchy() {
         std::stringstream ss;
-        ss << std::endl;
+        ss << "\n";
 
         const char* last = history.back().first.c_str();
         std::string pad;
@@ -253,14 +255,16 @@ private:
         for(ChunkHistory::reverse_iterator rev = history.rbegin(),
             end = history.rend(); rev != end; ++rev, pad += "  ")
         {
-            ss << pad << (*rev).first << "(Index: " << (*rev).second[last] << ")" << std::endl;
+            ss << pad << (*rev).first << "(Index: " << (*rev).second[last] << ")" << "\n";
             last = (*rev).first.c_str();
         }
 
-        ss << std::endl << "Debug trace: "<< std::endl;
+        ss << std::endl << "Debug trace: "<< "\n";
         for (std::vector<std::string>::const_iterator it = debug_trace.begin(); it != debug_trace.end(); ++it) {
-            ss << *it << std::endl;
+            ss << *it << "\n";
         }
+        ss << std::flush;
+
         return ss.str();
     }
 
@@ -796,6 +800,10 @@ void CompareOnTheFlyTexture(comparer_context& comp) {
     comp.cmp<char>("achFormatHint[1]");
     comp.cmp<char>("achFormatHint[2]");
     comp.cmp<char>("achFormatHint[3]");
+    comp.cmp<char>("achFormatHint[4]");
+    comp.cmp<char>("achFormatHint[5]");
+    comp.cmp<char>("achFormatHint[6]");
+    comp.cmp<char>("achFormatHint[7]");
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -877,19 +885,19 @@ int Assimp_CompareDump (const char* const* params, unsigned int num)
     // --help
     if ((num == 1 && !strcmp( params[0], "-h")) || !strcmp( params[0], "--help") || !strcmp( params[0], "-?") ) {
         printf("%s",AICMD_MSG_CMPDUMP_HELP);
-        return 0;
+        return AssimpCmdError::Success;
     }
 
     // assimp cmpdump actual expected
-    if (num < 1) {
+    if (num < 2) {
         std::cout << "assimp cmpdump: Invalid number of arguments. "
             "See \'assimp cmpdump --help\'\r\n" << std::endl;
-        return 1;
+        return AssimpCmdError::InvalidNumberOfArguments;
     }
 
     if(!strcmp(params[0],params[1])) {
         std::cout << "assimp cmpdump: same file, same content." << std::endl;
-        return 0;
+        return AssimpCmdError::Success;
     }
 
     class file_ptr
@@ -916,13 +924,13 @@ int Assimp_CompareDump (const char* const* params, unsigned int num)
     if (!actual) {
         std::cout << "assimp cmpdump: Failure reading ACTUAL data from " <<
             params[0]  << std::endl;
-        return -5;
+        return AssimpCmdError::FailedToLoadInputFile;
     }
     file_ptr expected(fopen(params[1],"rb"));
     if (!expected) {
         std::cout << "assimp cmpdump: Failure reading EXPECT data from " <<
             params[1]  << std::endl;
-        return -6;
+        return AssimpCmdCompareDumpError::FailedToLoadExpectedInputFile;
     }
 
     comparer_context comp(actual,expected);
@@ -932,17 +940,17 @@ int Assimp_CompareDump (const char* const* params, unsigned int num)
     }
     catch(const compare_fails_exception& ex) {
         printf("%s",ex.what());
-        return -1;
+        return AssimpCmdCompareDumpError::FileComparaisonFailure;
     }
     catch(...) {
         // we don't bother checking too rigourously here, so
         // we might end up here ...
         std::cout << "Unknown failure, are the input files well-defined?";
-        return -3;
+        return AssimpCmdCompareDumpError::UnknownFailure;
     }
 
     std::cout << "Success (totally " << std::dec << comp.get_num_chunks() <<
         " chunks)" << std::endl;
 
-    return 0;
+    return AssimpCmdError::Success;
 }
