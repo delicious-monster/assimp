@@ -51,9 +51,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endif
 
 // Some runtime headers
-#include <sys/types.h>
-#include <memory.h>
-#include <math.h>
 #include <limits.h>
 #include <stddef.h>
 #include <stdint.h>
