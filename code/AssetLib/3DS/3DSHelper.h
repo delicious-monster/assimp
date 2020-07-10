@@ -497,7 +497,7 @@ struct Material {
         mName = std::move(other.mName);
         mDiffuse = std::move(other.mDiffuse);
         mSpecularExponent = std::move(other.mSpecularExponent);
-        mShininessStrength = std::move(other.mShininessStrength),
+        mShininessStrength = std::move(other.mShininessStrength);
         mSpecular = std::move(other.mSpecular);
         mAmbient = std::move(other.mAmbient);
         mShading = std::move(other.mShading);
